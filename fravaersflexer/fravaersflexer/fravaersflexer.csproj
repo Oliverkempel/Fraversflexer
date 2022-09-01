@@ -9,6 +9,17 @@
 		<Exec Command="npm run style:build" />
 	</Target>
 	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	    <PrivateAssets>all</PrivateAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	    <PrivateAssets>all</PrivateAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
 	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+	  <PackageReference Include="pomelo.entityframeworkcore.mysql" Version="6.0.2" />
 	</ItemGroup>
 </Project>

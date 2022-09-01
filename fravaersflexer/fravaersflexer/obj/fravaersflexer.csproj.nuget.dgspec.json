@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/admin/Documents/Projects/Github/Fraversflexer/fravaersflexer/fravaersflexer/fravaersflexer.csproj": {}
+  },
+  "projects": {
+    "/home/admin/Documents/Projects/Github/Fraversflexer/fravaersflexer/fravaersflexer/fravaersflexer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/admin/Documents/Projects/Github/Fraversflexer/fravaersflexer/fravaersflexer/fravaersflexer.csproj",
+        "projectName": "fravaersflexer",
+        "projectPath": "/home/admin/Documents/Projects/Github/Fraversflexer/fravaersflexer/fravaersflexer/fravaersflexer.csproj",
+        "packagesPath": "/home/admin/.nuget/packages/",
+        "outputPath": "/home/admin/Documents/Projects/Github/Fraversflexer/fravaersflexer/fravaersflexer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/admin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Ajax": {
+              "target": "Package",
+              "version": "[3.2.6, )"
+            },
+            "pomelo.entityframeworkcore.mysql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.8, 6.0.8]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
