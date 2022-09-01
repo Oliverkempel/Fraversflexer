@@ -6,6 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 	<Target Name="Tailwind" BeforeTargets="Build">
-		<Exec Command="npm run style:build"/>
+		<Exec Command="npm run style:build" />
 	</Target>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+	</ItemGroup>
 </Project>
