@@ -705,12 +705,6 @@ video {
   width: 1rem;
 }
 
-.min-w-max {
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -771,11 +765,6 @@ video {
 
 .bg-flexprimary {
   background-color: 0ea5e9;
-}
-
-.bg-slate-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 .bg-flexdark {
