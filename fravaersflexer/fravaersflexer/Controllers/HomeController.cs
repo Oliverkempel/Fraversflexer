@@ -18,7 +18,8 @@ namespace fravaersflexer.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Person> persons = (from person in this.Context.Person.Take(10) select person).ToList();
+            return View(persons);
         }
 
         public IActionResult Privacy()
@@ -39,7 +40,7 @@ namespace fravaersflexer.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RegisterAbsence([Bind("Id,Name,EducationName,ClassName,SchoolName,AbsencePercentage")] Person person)
+        public async Task<IActionResult> RegisterAbsence([Bind("Id,Name,Age,EducationName,ClassName,SchoolName,AbsencePercentage")] Person person)
         {
             if (ModelState.IsValid)
             {

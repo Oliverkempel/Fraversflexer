@@ -9,7 +9,8 @@ namespace fravaersflexer.Models
     public class Person
     {
         public int Id { get; set; }
-        public string Name { get; set; }    
+        public string Name { get; set; }
+        public int Age { get; set; }
         public string EducationName { get; set; }
         public string ClassName { get; set; }
         public string SchoolName { get; set; }

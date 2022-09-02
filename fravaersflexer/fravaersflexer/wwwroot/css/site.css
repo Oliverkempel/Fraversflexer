@@ -669,6 +669,10 @@ video {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -765,6 +769,11 @@ video {
 
 .bg-flexprimary {
   background-color: 0ea5e9;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-flexdark {
