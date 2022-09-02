@@ -10,4 +10,8 @@
     .btn-secondary {
         @apply py-1 px-3 text-white bg-slate-700 transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:bg-slate-600/40 rounded text-base hover:bg-slate-600 items-center inline-flex
     }
+
+    .form-input {
+        @apply border-2 border-gray-600 text-sm rounded-lg focus:border-flexprimary p-5 bg-gray-700 text-white outline-none shadow-lg focus:shadow-flexprimary/10
+    }
 }

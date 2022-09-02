@@ -18,7 +18,16 @@ namespace fravaersflexer.Controllers
 
         public IActionResult Index()
         {
-            List<Person> persons = (from person in this.Context.Person.Take(10) select person).ToList();
+            //List<Person> persons = (from person in this.Context.Person.Take(10) select person).ToList();
+            List<Person> persons = new List<Person> 
+            { 
+                new Person() { Age = 12, Name = "Mads", SchoolName = "College360", ClassName = "3X", EducationName = "HTX", AbsencePercentage = 20 },
+                new Person() { Age = 12, Name = "Morten", SchoolName = "Silkeborg Gym", ClassName = "2K", EducationName = "STX", AbsencePercentage = 3 },
+                new Person() { Age = 12, Name = "William", SchoolName = "Rudolf steiner skolen", ClassName = "3X", EducationName = "HHX", AbsencePercentage = 34 },
+                new Person() { Age = 12, Name = "Jens", SchoolName = "T.H Langs", ClassName = "1H", EducationName = "HF", AbsencePercentage = 65 },
+                new Person() { Age = 12, Name = "Kurt", SchoolName = "Silkeborg Gym", ClassName = "3J", EducationName = "STX", AbsencePercentage = 12 },
+                new Person() { Age = 12, Name = "Gorm", SchoolName = "College360", ClassName = "2XY", EducationName = "HTX", AbsencePercentage = 6 } 
+            };
             return View(persons);
         }
 
