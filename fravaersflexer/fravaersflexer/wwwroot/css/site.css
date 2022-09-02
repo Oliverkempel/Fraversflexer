@@ -917,12 +917,6 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-@media (min-width: 640px) {
-  .sm\:flex-row {
-    flex-direction: row;
-  }
-}
-
 @media (min-width: 768px) {
   .md\:mx-auto {
     margin-left: auto;
@@ -939,6 +933,10 @@ video {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
