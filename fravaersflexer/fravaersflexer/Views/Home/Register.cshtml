@@ -1,0 +1,14 @@
+@model fravaersflexer.Models.Person;
+@{
+    ViewData["Title"] = "Register";
+}
+<h1>@ViewData["Title"]</h1>
+
+    <form asp-controller="Home" asp-action="RegisterAbsence">
+        Navn: <input asp-for="Name" type="text" /> <br />
+        Uddannelse: <input asp-for="EducationName " type="text" /><br />
+        Årgang: <input asp-for="ClassName" type="text" /><br />
+        Skole: <input asp-for="SchoolName" type="text" /><br />
+        Fraværsprocent: <input asp-for="AbsencePercentage" type="text" /><br />
+        <button type="submit" value="Other" class="btn btn-primary">Create</button>
+    </form>

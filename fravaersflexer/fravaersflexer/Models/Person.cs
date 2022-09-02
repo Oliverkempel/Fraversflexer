@@ -10,10 +10,9 @@ namespace fravaersflexer.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }    
-        public string Surname { get; set; }
-        public int Cocklength { get; set; }
-        public string Klasse { get; set; }
-        public int Alder { get; set; }
-        public string Email { get; set; }
+        public string EducationName { get; set; }
+        public string ClassName { get; set; }
+        public string SchoolName { get; set; }
+        public float AbsencePercentage { get; set; }
     }
 }

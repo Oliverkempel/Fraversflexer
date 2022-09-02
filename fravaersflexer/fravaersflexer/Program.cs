@@ -33,7 +33,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-
+ApplyMigrations(app);
 app.Run();
 
 static void ApplyMigrations(WebApplication app)
