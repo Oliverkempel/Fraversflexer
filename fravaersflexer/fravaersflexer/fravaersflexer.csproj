@@ -22,4 +22,7 @@
 	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
 	  <PackageReference Include="pomelo.entityframeworkcore.mysql" Version="6.0.2" />
 	</ItemGroup>
+	<ItemGroup>
+		<None Include="node_modules/**" />
+	</ItemGroup>
 </Project>
