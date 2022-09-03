@@ -4,56 +4,55 @@
 }
 
 <div class="container mx-auto">
-  <div class="bg-slate-800 rounded-xl lg:w-3/6 justify-center p-10 mx-auto">
-    <h1 class="text-3xl font-medium text-center pb-2 text-white">@ViewData["Title"] fravær</h1>
-    <div class="bg-flexprimary w-2/6 h-1 rounded-lg mx-auto mb-1"></div>
-    <p class="text-ms text-gray-400 text-center mb-5">Indtast fravær i nedenstående felter</p>
-
-    <form asp-controller="Home" asp-action="RegisterAbsence" class="flex flex-col space-y-9">
-
-
-      <div class="flex flex-row h-12">
-        <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Navn:</label>
-        <input class=" flex-auto border-2 form-input" title="" asp-for="Name" type="text" />
-      </div>
-      <div class="flex flex-row h-12">
-        <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Alder:</label>
-        <input class=" flex-auto form-input" asp-for="Age" type="text" />
-      </div>
-      <div class="flex flex-row h-12">
-        <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Årgang:</label>
-        <select class=" flex-auto select-input" asp-for="ClassName" type="text">
-          <option value="1.g">1.g</option>
-          <option value="2.g">2.g</option>
-          <option value="3.g">3.g</option>
-          <option value="4.g">4.g</option>
-        </select>
-      </div>
-      <div class="flex flex-row h-12">
-        <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Skole:</label>
-        <input class=" flex-auto form-input" asp-for="SchoolName" type="text" />
-      </div>
-      <div class="flex flex-row h-12">
-        <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Uddandelse:</label>
-        <select class=" flex-auto select-input" asp-for="EducationName" type="text">
-          <option value="STX">STX</option>
-          <option value="HHX">HHX</option>
-          <option value="HF">HF</option>
-          <option value="HTX">HTX</option>
-          <option value="EUD">EUD</option>
-          <option value="EUX">EUX</option>
-        </select>
-      </div>
-      <div class="flex flex-row h-12">
-        <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Fraværsprocent:</label>
-        <input class=" flex-auto form-input" asp-for="AbsencePercentage" type="text" />
-      </div>
-
-      <button type="submit" value="Other" class="btn-primary bg-flexprimary h-12 w-80 mx-auto">
-        <p class="text-lg mx-auto">Indsend</p>
-      </button>
-
-    </form>
-  </div>
-
+    <div class="bg-slate-800 rounded-xl lg:w-3/6 justify-center p-10 mx-auto">
+        <h1 class="text-3xl font-medium text-center pb-2 text-white">@ViewData["Title"] fravær</h1>
+        <div class="bg-flexprimary w-2/6 h-1 rounded-lg mx-auto mb-1"></div>
+        <p class="text-ms text-gray-400 text-center mb-5">Indtast fravær i nedenstående felter</p>
+      
+        <form asp-controller="Home" asp-action="RegisterAbsence" class="flex flex-col space-y-9">
+      
+      
+        <div class="flex flex-row h-12">
+            <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Navn:</label>
+            <input class=" flex-auto border-2 form-input" title="" asp-for="Name" type="text" />
+        </div>
+        <div class="flex flex-row h-12">
+            <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Alder:</label>
+            <input class=" flex-auto form-input" asp-for="Age" type="text" />
+        </div>
+        <div class="flex flex-row h-12">
+            <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Årgang:</label>
+            <select class="flex-auto select-input pl-5" asp-for="ClassName" type="text">
+            <option value="1.g">1.g</option>
+            <option value="2.g">2.g</option>
+            <option value="3.g">3.g</option>
+            <option value="4.g">4.g</option>
+            </select>
+        </div>
+        <div class="flex flex-row h-12">
+            <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Skole:</label>
+            <input class=" flex-auto form-input" asp-for="SchoolName" type="text" />
+        </div>
+        <div class="flex flex-row h-12">
+            <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Uddandelse:</label>
+            <select class="flex-auto select-input pl-5" asp-for="EducationName" type="text">
+            <option value="STX">STX</option>
+            <option value="HHX">HHX</option>
+            <option value="HF">HF</option>
+            <option value="HTX">HTX</option>
+            <option value="EUD">EUD</option>
+            <option value="EUX">EUX</option>
+            </select>
+        </div>
+        <div class="flex flex-row h-12">
+            <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Fraværsprocent:</label>
+            <input class=" flex-auto form-input" asp-for="AbsencePercentage" type="text" />
+        </div>
+      
+        <button type="submit" value="Other" class="btn-primary bg-flexprimary h-12 w-80 mx-auto">
+            <p class="text-lg mx-auto">Indsend</p>
+        </button>
+      
+        </form>
+    </div>
 </div>
