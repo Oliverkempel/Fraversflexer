@@ -15,3 +15,11 @@
         @apply border-2 border-gray-600 text-sm rounded-lg focus:border-flexprimary p-5 bg-gray-700 text-white outline-none shadow-lg focus:shadow-blue-500/10
     }
 }
+
+.rows tr:nth-child(even) {
+    background-color: #1e293b
+}
+
+.rows tr:nth-child(odd) {
+    background-color: #111827
+}
