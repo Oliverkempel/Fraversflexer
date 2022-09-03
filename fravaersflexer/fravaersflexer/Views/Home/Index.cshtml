@@ -1,4 +1,8 @@
 ﻿@using fravaersflexer.Models;
+
+{
+  
+}
 @model IEnumerable<Person>
 @{
     ViewData["Title"] = "Home Page";
@@ -13,12 +17,24 @@
 <table class="bg-white">
       <thead>
     <tr>
-      <th>Navn</th>
-      <th>Alder</th>
-      <th>Skole</th>
-        <th>Uddanelse</th>
-      <th>Klasse</th>
-      <th>Fraværs Procnet</th>
+      <th>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]"> Navn</a>
+      </th>
+      <th>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["AgeSortParm"]">Alder</a>
+      </th>
+      <th>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">Skole</a>
+      </th>
+      <th>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">Uddanelse</a>
+      </th>
+      <th>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">Klasse</a>
+      </th>
+      <th>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["AbsenceSortParm"]">Fraværs Procnet</a>
+      </th>
     </tr>
       </thead>
         <tbody>
