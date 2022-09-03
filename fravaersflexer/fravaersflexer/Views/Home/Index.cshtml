@@ -23,29 +23,35 @@
     </div>
   </section>
 
+  <section class="container mx-auto">
+    <div class="relative rounded-t-xl mb-0 overflow-auto bg-flexprimary h-2"></div>
+            <div class="overflow-hidden bg-slate-800">
+            <table class="table-auto w-full text-left text-sm text-white ">
+                <thead>
+                    <tr class="bg-flexprimary p-8 h-10">
+                        <th class="pl-8">Navn</th>
+                        <th>Alder</th>
+                        <th>Årgang</th>
+                        <th>Uddandelse</th>
+                        <th>Klasse</th>
+                        <th class="pr-8">Fraværsprocent</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-black rows">
 
-<table class="bg-white">
-      <thead>
-    <tr>
-      <th>Navn</th>
-      <th>Alder</th>
-      <th>Skole</th>
-        <th>Uddanelse</th>
-      <th>Klasse</th>
-      <th>Fraværs Procnet</th>
-    </tr>
-      </thead>
-        <tbody>
-    @foreach (Person persons in Model)
-    {
-        <tr>
-            <td>@persons.Name</td>
-            <td>@persons.Age</td>
-            <td>@persons.SchoolName</td>
-            <td>@persons.EducationName</td>
-            <td>@persons.ClassName</td>
-            <td>@persons.AbsencePercentage</td>
-        </tr>
-            }
-    </tbody>
-</table>
+                        @foreach (Person persons in Model)
+                        {
+                        <tr>
+                            <th class="h-10 pl-8">@persons.Name</th>
+                            <th class="h-10">@persons.Age</th>
+                            <th class="h-10">NaN</th>
+                            <th class="h-10">@persons.EducationName</th>
+                            <th class="h-10">@persons.ClassName</th>
+                            <th class="h-10 pr-8">@persons.AbsencePercentage</th>
+                        </tr>
+                        }
+                </tbody>
+            </table>
+      </div>
+      <div class="relative rounded-b-xl mt-0 overflow-auto bg-slate-800 h-2"></div>
+  </section>
