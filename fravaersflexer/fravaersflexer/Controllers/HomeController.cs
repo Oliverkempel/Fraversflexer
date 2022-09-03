@@ -20,9 +20,12 @@ namespace fravaersflexer.Controllers
 
         public async Task<IActionResult> Index(string sortOrder)
         {
-            ViewData["AbsenceSortParm"] = String.IsNullOrEmpty(sortOrder) ? "absence_desc" : "";
-            ViewData["AgeSortParm"] = sortOrder == "Age" ? "age_desc" : "Age";
-            ViewData["NameSortParm"] = sortOrder == "Name" ? "name_desc" : "Name";
+            ViewData["NameSortParm"] = sortOrder == "Name" ? "Name_desc" : "Name";
+            ViewData["AgeSortParm"] = sortOrder == "Age" ? "Age_desc" : "Age";
+            ViewData["SchoolSortParm"] = sortOrder == "School" ? "School_desc" : "School";
+            ViewData["EducationSortParm"] = sortOrder == "Education" ? "Education_desc" : "Education";
+            ViewData["ClassSortParm"] = sortOrder == "Class" ? "Class_desc" : "Class";
+            ViewData["AbsenceSortParm"] = String.IsNullOrEmpty(sortOrder) ? "Absence_desc" : "";
             var persons = from s in this.Context.Person select s;
             //List<Person> persons = (from person in this.Context.Person.Take(10) select person).ToList();
             //List<Person> persons = new List<Person> 
@@ -36,20 +39,38 @@ namespace fravaersflexer.Controllers
             //};
             switch (sortOrder)
             {
-                case "absence_desc":
+                case "Name":
+                    persons = persons.OrderBy(s => s.Name);
+                    break;
+                case "Name_desc":
                     persons = persons.OrderByDescending(s => s.Name);
                     break;
                 case "Age":
                     persons = persons.OrderBy(s => s.Age);
                     break;
-                case "age_desc":
+                case "Age_desc":
                     persons = persons.OrderByDescending(s => s.Age);
                     break;
-                case "Name":
-                    persons = persons.OrderBy(s => s.Name);
+                case "School":
+                    persons = persons.OrderBy(s => s.ClassName);
                     break;
-                case "name_desc":
-                    persons = persons.OrderByDescending(s => s.Name);
+                case "School_desc":
+                    persons = persons.OrderByDescending(s => s.ClassName);
+                    break;
+                case "Education":
+                    persons = persons.OrderBy(s => s.EducationName);
+                    break;
+                case "Education_desc":
+                    persons = persons.OrderByDescending(s => s.EducationName);
+                    break;
+                case "Class":
+                    persons = persons.OrderBy(s => s.ClassName);
+                    break;
+                case "Class_desc":
+                    persons = persons.OrderByDescending(s => s.ClassName);
+                    break;
+                case "Absence_desc":
+                    persons = persons.OrderByDescending(s => s.AbsencePercentage);
                     break;
                 default:
                     persons = persons.OrderBy(s => s.AbsencePercentage);

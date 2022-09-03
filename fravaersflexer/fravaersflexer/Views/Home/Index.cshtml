@@ -1,14 +1,14 @@
 ﻿@using fravaersflexer.Models;
 
 {
-  
+
 }
 @model IEnumerable<Person>
 @{
     ViewData["Title"] = "Home Page";
 }
 
-  <section class="container mx-auto py-10">
+<section class="container mx-auto py-10">
     <div class="grid  grid-cols-1 lg:grid-cols-2 gap-10">
         <div class=" bg-slate-800 rounded-xl h-52 p-6">
             <h1 class="text-2xl font-medium text-center pb-2 text-white">Fraværs statistik</h1>
@@ -21,37 +21,49 @@
             <p class="text-xs text-gray-400 text-center mb-5">3 elever med mest fravær i hele landet</p>
         </div>
     </div>
-  </section>
+</section>
 
-  <section class="container mx-auto">
+<section class="container mx-auto">
     <div class="relative rounded-t-xl mb-0 overflow-auto bg-flexprimary h-2"></div>
-            <div class="overflow-hidden bg-slate-800">
-            <table class="table-auto w-full text-left text-sm text-white ">
-                <thead>
-                    <tr class="bg-flexprimary p-8 h-10">
-                        <th class="pl-8">Navn</th>
-                        <th>Alder</th>
-                        <th>Årgang</th>
-                        <th>Uddandelse</th>
-                        <th>Klasse</th>
-                        <th class="pr-8">Fraværsprocent</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-black rows">
+    <div class="overflow-hidden bg-slate-800">
+        <table class="table-auto w-full text-left text-sm text-white ">
+            <thead>
+                <tr class="bg-flexprimary p-8 h-10">
+                    <th class="pl-8">
+                        <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">Navn</a>
+                    </th>
+                    <th>
+                        <a asp-action="Index" asp-route-sortOrder="@ViewData["AgeSortParm"]">Alder</a>
+                    </th>
+                    <th>
+                        <a asp-action="Index" asp-route-sortOrder="@ViewData["SchoolSortParm"]">Skole</a>
+                    </th>
+                    <th>
+                        <a asp-action="Index" asp-route-sortOrder="@ViewData["EducationSortParm"]">Uddandelse</a>
+                    </th>
+                    <th>
+                        <a asp-action="Index" asp-route-sortOrder="@ViewData["ClassSortParm"]">Klasse</a>
+                    </th>
+                    <th class="pr-8">
+                        <a asp-action="Index" asp-route-sortOrder="@ViewData["AbsenceSortParm"]">Fraværsprocent</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-black rows">
 
-                        @foreach (Person persons in Model)
-                        {
-                        <tr>
-                            <th class="h-10 pl-8">@persons.Name</th>
-                            <th class="h-10">@persons.Age</th>
-                            <th class="h-10">NaN</th>
-                            <th class="h-10">@persons.EducationName</th>
-                            <th class="h-10">@persons.ClassName</th>
-                            <th class="h-10 pr-8">@persons.AbsencePercentage</th>
-                        </tr>
-                        }
-                </tbody>
-            </table>
-      </div>
-      <div class="relative rounded-b-xl mt-0 overflow-auto bg-slate-800 h-2"></div>
-  </section>
+                @foreach (Person persons in Model)
+                {
+                    <tr>
+                        <th class="h-10 pl-8">@persons.Name</th>
+                        <th class="h-10">@persons.Age</th>
+                        <th class="h-10">@persons.SchoolName</th>
+                        <th class="h-10">@persons.EducationName</th>
+                        <th class="h-10">@persons.ClassName</th>
+                        <th class="h-10 pr-8">@persons.AbsencePercentage</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="relative rounded-b-xl mt-0 overflow-auto bg-slate-800 h-2"></div>
+</section>
