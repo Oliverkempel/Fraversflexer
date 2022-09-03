@@ -2,7 +2,6 @@
 @{
     ViewData["Title"] = "Register";
 }
-<h1>@ViewData["Title"]</h1>
 
     <div class="container mx-auto">
     <div class="bg-slate-800 rounded-xl lg:w-3/6 justify-center p-10 mx-auto">
@@ -15,7 +14,7 @@
 
         <div class="flex flex-row h-12">
           <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Navn:</label>
-          <input class=" flex-auto border-2 border-gray-600 text-sm rounded-lg focus:border-flexprimary p-5 bg-gray-700 text-white outline-none shadow-lg focus:shadow-flexprimary/10" title="" asp-for="Name" type="text" />
+          <input class=" flex-auto border-2 form-input" title="" asp-for="Name" type="text" />
         </div>
         <div class="flex flex-row h-12">
           <label class="sm:basis-1/4 basis-2/6 flex-none text-lg text-gray-400 my-auto">Alder:</label>
