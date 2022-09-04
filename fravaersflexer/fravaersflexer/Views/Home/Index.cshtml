@@ -5,34 +5,124 @@
     ViewData["Title"] = "Home Page";
 }
 
-<section class="container mx-auto py-10">
-    <div class="grid  grid-cols-1 lg:grid-cols-2 sm:gap-10">
-        <div class=" bg-slate-800 sm:rounded-xl h-[22rem] p-6">
+<!-- Statistik Sektion -->
+  <section class="container mx-auto py-10">
+    <div class="grid  grid-cols-1 lg:grid-cols-2 sm:gap-10">  
+
+
+        <!-- Fraværsstatistik rubrik -->
+        <div class=" bg-slate-800 sm:rounded-xl h-[26rem] p-6">
             <h1 class="text-2xl font-medium text-center pb-2 text-white">Fraværs statistik</h1>
             <div class="bg-flexprimary w-2/6 h-1 rounded-lg mx-auto mb-1"></div>
             <p class="text-xs text-gray-400 text-center mb-5">gennemsnitlig fravær for uddandelserne</p>
+
+            
+            <div class="grid grid-cols-8 mb-2">
+                <div class="col-span-2 text-center">
+                    <h1 class=" text-sm md:text-lg text-gray-400 font-bold">0%</h1>
+                </div>
+                <div class="col-span-6 text-right">
+                    <h1 class="text-sm md:text-lg text-gray-400 font-bold">100%</h1>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-8">
+                <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-flexprimary absolute z-10"></div>
+                </div>
+                <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-blue-500/30 absolute"></div>
+                </div>
+                <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-blue-500/30 absolute "></div>
+                </div>
+                <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-blue-500/30 absolute "></div>
+                </div>
+                <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-blue-500/30 absolute "></div>
+                </div>
+                <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-blue-500/30 absolute "></div>
+                </div>
+                <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-blue-500/30 absolute "></div>
+                </div>
+                    <div class="col-span-1 flex flex-row justify-end">
+                    <div class="w-[0.3rem] rounded-lg h-64 bg-blue-500/30 absolute "></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-4">
+                <div class="grid grid-cols-8 items-center ">
+                    <h1 class="text-sm md:text-lg font-bold text-white mr-5 col-span-1">HTX</h1>
+                    <div class="w-34  rounded-r-full h-6 col-span-7 -z-0">
+                        <div class="bg-flexprimary text-xs font-extrabold text-blue-100 text-right pr-5 p-0.5 leading-none rounded-r-full h-6" style="width: 23%"> 23%</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-8 items-center ">
+                    <h1 class="text-sm md:text-lg font-bold text-white mr-5 col-span-1 ">HHX</h1>
+                    <div class="w-34  rounded-r-full h-6 col-span-7 -z-0">
+                        <div class="bg-flexprimary text-xs font-extrabold text-blue-100 text-right pr-5 p-0.5 leading-none rounded-r-full h-6" style="width: 84%"> 84%</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-8 items-center ">
+                    <h1 class="text-sm md:text-lg font-bold text-white mr-5 col-span-1">STX</h1>
+                    <div class="w-34  rounded-r-full h-6 col-span-7 -z-0">
+                        <div class="bg-flexprimary text-xs font-extrabold text-blue-100 text-right pr-5 p-0.5 leading-none rounded-r-full h-6" style="width: 54%"> 54%</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-8 items-center ">
+                    <h1 class="text-sm md:text-lg font-bold text-white mr-5 col-span-1">HF</h1>
+                    <div class="w-34  rounded-r-full h-6 col-span-7 -z-0">
+                        <div class="bg-flexprimary text-xs font-extrabold text-blue-100 text-right pr-5 p-0.5 leading-none rounded-r-full h-6" style="width: 12%"> 12%</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-8 items-center ">
+                    <h1 class=" text-sm md:text-lg font-bold text-white mr-5 col-span-1">EUX</h1>
+                    <div class="w-34  rounded-r-full h-6 col-span-7 -z-0">
+                        <div class="bg-flexprimary text-xs font-extrabold text-blue-100 text-right pr-5 p-0.5 leading-none rounded-r-full h-6" style="width: 76%"> 76%</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-8 items-center ">
+                    <h1 class="text-sm md:text-lg font-bold text-white mr-5 col-span-1">EUD</h1>
+                    <div class="w-34  rounded-r-full h-6 col-span-7 -z-0">
+                        <div class="bg-flexprimary text-xs font-extrabold text-blue-100 text-right pr-5 p-0.5 leading-none rounded-r-full h-6" style="width: 45%"> 45%</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="relative bg-slate-800 sm:rounded-xl h-[22rem]">
+
+        <!-- Fraværspodiet rubrik -->
+        <div class="relative bg-slate-800 sm:rounded-xl h-[26rem]">
             <div class="p-6">
                 <h1 class="text-2xl font-medium text-center pb-2 text-white">Fraværs Podiet</h1>
                 <div class="bg-flexprimary w-2/6 h-1 rounded-lg mx-auto mb-1"></div>
                 <p class="text-xs text-gray-400 text-center mb-5">3 elever med mest fravær i hele landet</p>
             </div>
             
-
+            @{
+                IEnumerable<Person> Winners = ViewData["Winners"] as IEnumerable<Person>;
+                Person firstPlace = new Person();
+                firstPlace = Winners.First();
+                Person secondPlace = new Person();
+                secondPlace = Winners.Skip(1).First();
+                Person thirdPlace = new Person();
+                thirdPlace = Winners.Skip(2).First();
+            }
 
             <div class="flex flex-row justify-items-center w-full rounded-b-lg text-white">
-                <div class="basis-1/3 h-28 text-center mt-8 p-2 sm:p-0">
-                    <h1 class="text-sm sm:text-lg font-bold mb-0">Ole Benstrup</h1>
-                    <p class="text-xs sm:text-sm mt-0 text-gray-400">1.G | Silkeborg Gymnasium | 20 %</p>
+                <div class="basis-1/3 h-28 text-center mt-24 p-2 sm:p-0"> 
+                        <h1 class="text-sm sm:text-lg font-bold mb-0">@secondPlace.Name</h1>
+                    <p class="text-xs sm:text-sm mt-0 text-gray-400">@secondPlace.Age | @secondPlace.SchoolName | @secondPlace.AbsencePercentage %</p>
                 </div>
-                <div class="basis-1/3 h-28 text-center mt-[-2%] p-2 sm:p-0">
-                    <h1 class="text-sm sm:text-lg font-bold mb-0 text-flexprimary shadow-flexprimary">Mia Thidemann</h1>
-                    <p class="text-xs sm:text-sm mt-0 text-gray-400">2.G | VUC Fyn | 67 %</p>
+                <div class="basis-1/3 h-28 text-center mt-12 p-2 sm:p-0">
+                    <h1 class="text-sm sm:text-lg font-bold mb-0 text-flexprimary shadow-flexprimary">@firstPlace.Name</h1>
+                    <p class="text-xs sm:text-sm mt-0 text-gray-400">@firstPlace.Age | @firstPlace.SchoolName | @firstPlace.AbsencePercentage %</p>
                 </div>
-                <div class="basis-1/3 h-28 text-center mt-16 p-2 sm:p-0">
-                    <h1 class="text-sm sm:text-lg font-bold mb-0">Jens Bækgaard</h1>
-                    <p class="text-xs sm:text-sm mt-0 text-gray-400">3.G | College360 | 12 %</p>
+                <div class="basis-1/3 h-28 text-center mt-32 p-2 sm:p-0">
+                    <h1 class="text-sm sm:text-lg font-bold mb-0">@thirdPlace.Name</h1>
+                    <p class="text-xs sm:text-sm mt-0 text-gray-400">@thirdPlace.Age | @thirdPlace.SchoolName | @thirdPlace.AbsencePercentage %</p>
                 </div>
             </div>
             <div class="flex flex-row justify-items-center absolute bottom-0 w-full items-end sm:rounded-b-lg text-white">
@@ -55,11 +145,12 @@
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
 
+    </div>
+  </section>
+
+  <!-- Tabel sektion -->
 <section class="container mx-auto">
     <div class="relative rounded-t-xl mb-0 overflow-auto bg-flexprimary h-2"></div>
     <div class="overflow-hidden bg-slate-800">
@@ -87,7 +178,6 @@
                 </tr>
             </thead>
             <tbody class="bg-black rows">
-
                 @foreach (Person persons in Model)
                 {
                     <tr>

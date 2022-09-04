@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Collections.Generic;
 using fravaersflexer.Data;
+using System.Dynamic;
 
 namespace fravaersflexer.Controllers
 {
@@ -77,6 +78,19 @@ namespace fravaersflexer.Controllers
                     break;
             }
             //persons.Sort((x,y) => y.AbsencePercentage.CompareTo(x.AbsencePercentage));
+
+            Person firstPlacePerson = persons.OrderByDescending(x => x.AbsencePercentage).First();
+            Person secondPlacePerson = persons.OrderByDescending(x => x.AbsencePercentage).Skip(1).First();
+            Person thirdPlacePerson = persons.OrderByDescending(x => x.AbsencePercentage).Skip(2).First();
+
+            List<Person> leaderbordPersons = new List<Person>();
+            leaderbordPersons.Add(firstPlacePerson);
+            leaderbordPersons.Add(secondPlacePerson);
+            leaderbordPersons.Add(thirdPlacePerson);
+
+            ViewData["Winners"] = leaderbordPersons;
+
+
             return View(await persons.AsNoTracking().ToListAsync());
         }
 
