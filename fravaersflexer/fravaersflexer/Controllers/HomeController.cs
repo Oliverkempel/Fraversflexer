@@ -1,4 +1,6 @@
-﻿using fravaersflexer.Models;
+﻿using System;
+using System.Linq;
+using fravaersflexer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -28,6 +30,8 @@ namespace fravaersflexer.Controllers
             ViewData["ClassSortParm"] = sortOrder == "Class" ? "Class_desc" : "Class";
             ViewData["AbsenceSortParm"] = String.IsNullOrEmpty(sortOrder) ? "Absence_desc" : "";
             var persons = from s in this.Context.Person select s;
+
+
             //List<Person> persons = (from person in this.Context.Person.Take(10) select person).ToList();
             //List<Person> persons = new List<Person> 
             //{ 
@@ -89,6 +93,24 @@ namespace fravaersflexer.Controllers
             leaderbordPersons.Add(thirdPlacePerson);
 
             ViewData["Winners"] = leaderbordPersons;
+            
+            IDictionary<string, int> Sum_Educations = new Dictionary<string, int>();
+            var SUM_Edu = persons.Count();
+
+            double STX = 100*(double)persons.Where(s => s.EducationName.Equals("STX")).Count()/SUM_Edu;           
+            double HHX = 100*(double)persons.Where(s => s.EducationName.Equals("HHX")).Count()/SUM_Edu;
+            double HTX = 100*(double)persons.Where(s => s.EducationName.Equals("HTX")).Count()/SUM_Edu;
+            double HF = 100*(double)persons.Where(s => s.EducationName.Equals("HF")).Count()/SUM_Edu;
+            double EUX = 100*(double)persons.Where(s => s.EducationName.Equals("EUX")).Count()/SUM_Edu;
+            double EUD = 100*(double)persons.Where(s => s.EducationName.Equals("EUD")).Count()/SUM_Edu;
+            // Lægger Variabler ind i Dictinary.
+            Sum_Educations.Add("STX", Convert.ToInt32(STX));
+            Sum_Educations.Add("HHX", Convert.ToInt32(HHX));
+            Sum_Educations.Add("HTX", Convert.ToInt32(HTX));
+            Sum_Educations.Add("HF",  Convert.ToInt32(HF));
+            Sum_Educations.Add("EUX", Convert.ToInt32(EUX));
+            Sum_Educations.Add("EUD", Convert.ToInt32(EUD));
+            ViewData["EducationData"] = Sum_Educations;
 
 
             return View(await persons.AsNoTracking().ToListAsync());

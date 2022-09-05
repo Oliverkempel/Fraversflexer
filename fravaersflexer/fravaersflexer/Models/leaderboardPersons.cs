@@ -11,6 +11,5 @@ namespace fravaersflexer.Models
         public Person firstPlace { get; set; }
         public Person secondPlace { get; set; }
         public Person thirdPlace { get; set; }
-
     }
 }
