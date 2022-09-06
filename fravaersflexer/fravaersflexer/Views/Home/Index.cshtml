@@ -103,6 +103,7 @@
             
             @{
                 IEnumerable<Person> Winners = ViewData["Winners"] as IEnumerable<Person>;
+
                 Person firstPlace = new Person();
                 firstPlace = Winners.First();
                 Person secondPlace = new Person();
