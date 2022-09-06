@@ -94,23 +94,40 @@ namespace fravaersflexer.Controllers
 
             ViewData["Winners"] = leaderbordPersons;
             
-            IDictionary<string, int> Sum_Educations = new Dictionary<string, int>();
-            var SUM_Edu = persons.Count();
+                IDictionary<string, int> Sum_Educations = new Dictionary<string, int>();
+                var SUM_Edu = persons.Count();
 
-            double STX = 100*(double)persons.Where(s => s.EducationName.Equals("STX")).Count()/SUM_Edu;           
-            double HHX = 100*(double)persons.Where(s => s.EducationName.Equals("HHX")).Count()/SUM_Edu;
-            double HTX = 100*(double)persons.Where(s => s.EducationName.Equals("HTX")).Count()/SUM_Edu;
-            double HF = 100*(double)persons.Where(s => s.EducationName.Equals("HF")).Count()/SUM_Edu;
-            double EUX = 100*(double)persons.Where(s => s.EducationName.Equals("EUX")).Count()/SUM_Edu;
-            double EUD = 100*(double)persons.Where(s => s.EducationName.Equals("EUD")).Count()/SUM_Edu;
-            // Lægger Variabler ind i Dictinary.
-            Sum_Educations.Add("STX", Convert.ToInt32(STX));
-            Sum_Educations.Add("HHX", Convert.ToInt32(HHX));
-            Sum_Educations.Add("HTX", Convert.ToInt32(HTX));
-            Sum_Educations.Add("HF",  Convert.ToInt32(HF));
-            Sum_Educations.Add("EUX", Convert.ToInt32(EUX));
-            Sum_Educations.Add("EUD", Convert.ToInt32(EUD));
-            ViewData["EducationData"] = Sum_Educations;
+                double STX = 100*(double)persons.Where(s => s.EducationName.Equals("STX")).Count()/SUM_Edu;           
+                double HHX = 100*(double)persons.Where(s => s.EducationName.Equals("HHX")).Count()/SUM_Edu;
+                double HTX = 100*(double)persons.Where(s => s.EducationName.Equals("HTX")).Count()/SUM_Edu;
+                double HF = 100*(double)persons.Where(s => s.EducationName.Equals("HF")).Count()/SUM_Edu;
+                double EUX = 100*(double)persons.Where(s => s.EducationName.Equals("EUX")).Count()/SUM_Edu;
+                double EUD = 100*(double)persons.Where(s => s.EducationName.Equals("EUD")).Count()/SUM_Edu;
+                // Lægger Variabler ind i Dictinary.
+                Sum_Educations.Add("STX", Convert.ToInt32(STX));
+                Sum_Educations.Add("HHX", Convert.ToInt32(HHX));
+                Sum_Educations.Add("HTX", Convert.ToInt32(HTX));
+                Sum_Educations.Add("HF",  Convert.ToInt32(HF));
+                Sum_Educations.Add("EUX", Convert.ToInt32(EUX));
+                Sum_Educations.Add("EUD", Convert.ToInt32(EUD));
+                
+                int MaxVal = Sum_Educations.Max(s => s.Value);
+                double STX_P = 100*(double)Sum_Educations["STX"]/MaxVal;           
+                double HHX_P = 100*(double)Sum_Educations["HHX"]/MaxVal;
+                double HTX_P = 100*(double)Sum_Educations["HTX"]/MaxVal;
+                double HF_P = 100*(double)Sum_Educations["HF"]/MaxVal;
+                double EUX_P = 100*(double)Sum_Educations["EUX"]/MaxVal;
+                double EUD_P = 100*(double)Sum_Educations["EUD"]/MaxVal;
+
+                Sum_Educations.Add("MaxVal", Convert.ToInt32(MaxVal));
+                Sum_Educations.Add("STX_P", Convert.ToInt32(STX_P));
+                Sum_Educations.Add("HHX_P", Convert.ToInt32(HHX_P));
+                Sum_Educations.Add("HTX_P", Convert.ToInt32(HTX_P));
+                Sum_Educations.Add("HF_P",  Convert.ToInt32(HF_P));
+                Sum_Educations.Add("EUX_P", Convert.ToInt32(EUX_P));
+                Sum_Educations.Add("EUD_P", Convert.ToInt32(EUD_P));
+
+                ViewData["EducationData"] = Sum_Educations;
 
 
             return View(await persons.AsNoTracking().ToListAsync());
