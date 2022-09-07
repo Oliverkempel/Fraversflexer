@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JvoUQrpHG6AOGT/UovG8mUhkFkYivZJtp3CqlN/d9cQ=",
+  "Hash": "risSsZsUqDeLOj+beoIV883ucDmdZkajtha8nt3sES4=",
   "Source": "fravaersflexer",
   "BasePath": "_content/fravaersflexer",
   "Mode": "Default",
@@ -321,23 +321,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
-    },
-    {
-      "Identity": "/home/admin/Documents/Projects/Github/Fraversflexer/fravaersflexer/fravaersflexer/wwwroot/src/6sgbcw.gif",
-      "SourceId": "fravaersflexer",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/admin/Documents/Projects/Github/Fraversflexer/fravaersflexer/fravaersflexer/wwwroot/",
-      "BasePath": "_content/fravaersflexer",
-      "RelativePath": "src/6sgbcw.gif",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/src/6sgbcw.gif"
     }
   ]
 }
