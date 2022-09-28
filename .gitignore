@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,visualstudio,linux,windows,node,database,aspnetcore
 
 ##Debug stuff?
-/fravaersflexer/fravaersflexer/obj/
+fravaersflexer/fravaersflexer/obj/
 
 ### ASPNETCore ###
 ## Ignore Visual Studio temporary files, build results, and
